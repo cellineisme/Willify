@@ -1,0 +1,867 @@
+:root {
+  --primary: #baddff;
+  --background: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--background);
+  color: #fff;
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 7%;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-bottom: 0.5px solid #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #baddff;
+}
+
+.navbar .navbar-nav a {
+  color: #fff;
+  display: inline-block;
+  font-size: 1.2rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: #fff;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: #baddff;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+/* home section */
+.home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-left: 110px;
+  justify-content: space-between;
+}
+
+.home .imgBox {
+  padding-right: 100px;
+  margin-top: 10px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.home .imgBox img {
+  max-width: 450px;
+  width: 100%;
+  height: auto;
+}
+
+.home .content {
+  position: relative;
+  max-width: 600px;
+}
+
+.home .content h1 {
+  font-size: 3em;
+  line-height: 1.4em;
+  font-weight: 500;
+}
+
+.home .content h1 span {
+  color: #baddff;
+  line-height: 1.4em;
+  font-weight: 900;
+}
+
+.home .content p {
+  margin-top: 5px;
+  color: #fff;
+}
+
+.home .content a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 8px 20px;
+  color: #000000;
+  font-weight: 500;
+  text-decoration: none;
+  background-color: #baddff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.home .cta:hover {
+  background-color: #a1c7e4;
+}
+
+/* home thumbs */
+.thumb {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.thumb li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.thumb li:hover {
+  transform: translateY(-25px);
+}
+
+.thumb li img {
+  max-width: 70px;
+}
+
+/* thumb circle */
+.circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #948c8b;
+  clip-path: circle(calc(50% - 50px) at top right);
+}
+
+/* recommendations */
+.recommend {
+  width: 100%;
+  height: auto;
+  padding: 70px 0;
+}
+
+.recommend h2 {
+  font-size: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  line-height: 1.4em;
+}
+
+.recommend h2 span {
+  margin-left: 15px;
+  color: #baddff;
+  font-weight: 900;
+}
+
+.recommend .recbox {
+  width: 100%;
+  margin: 40px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.recommend .recbox .reccard {
+  width: 250px;
+  margin: 12px;
+  border-radius: 8px;
+  overflow: visible;
+  background: #fff;
+  color: #000;
+  background: rgba(114, 110, 110, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+  padding-top: 10px;
+}
+
+.recommend .recbox .reccard .songcover {
+  position: relative;
+}
+
+.recommend .recbox .reccard img {
+  width: 210px;
+  height: 210px;
+  margin-top: 25px;
+  transition: 0.5s;
+  position: relative;
+}
+
+.recommend .recbox .reccard:hover img {
+  transform: translateY(-50px);
+}
+
+.recommend .recbox .reccard .songrec {
+  padding: 10px;
+  text-align: center;
+}
+
+.recommend .recbox .reccard .title {
+  font-size: 1.5em;
+  margin: 0.5px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.recommend .recbox .reccard .artist {
+  font-size: 1em;
+  font-weight: 400;
+  color: #baddff;
+}
+
+/* about us page */
+/* about willify */
+.beforewave {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  width: 100%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.beforewave h1 {
+  font-size: 30px;
+  color: #fff;
+  font-weight: 400;
+}
+
+.wave {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  width: 100%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+label {
+  font-size: 85px;
+  font-weight: 900;
+  color: #baddff;
+  cursor: pointer;
+}
+
+label span {
+  display: inline-block;
+  size: 50px;
+  font-weight: 900;
+  transition: 0.3s;
+}
+
+label:hover span {
+  color: #baddff;
+  transform: translateY(-30px);
+}
+
+label:hover {
+  color: #baddff;
+}
+
+/* history */
+.abt {
+  padding-top: 45vh;
+}
+
+.abt .row {
+  display: flex;
+}
+
+.abt .row .about-img {
+  flex: 1 1 45rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.abt .row .about-img img {
+  padding-bottom: 55vh;
+  max-width: 100%;
+  width: 50%;
+}
+
+.abt .row .content {
+  flex: 1 1 50rem;
+  padding-right: 15vh;
+}
+
+.abt .row .content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  color: #baddff;
+}
+
+.abt .row .content p {
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.6rem;
+}
+
+/* founder */
+.found {
+  margin-top: -25vh;
+}
+
+.found .row2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  gap: 2rem; /* Adds space between elements */
+}
+
+.found .row2 .content2 {
+  flex: 1 1 50rem;
+  padding: 0 5vh; /* Balanced padding left and right */
+  text-align: center; /* Center align text */
+}
+
+.found .row2 .content2 h2,
+.found .row2 .content2 h1,
+.found .row2 .content2 p {
+  margin: 0.5rem 0; /* Uniform margins for elements */
+}
+
+.found .row2 .content2 h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #baddff;
+}
+
+.found .row2 .content2 h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.2rem;
+  font-weight: 900;
+}
+
+.found .row2 .content2 p {
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.6rem;
+}
+
+.found .row2 .founder-img {
+  flex: 1 1 45rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.found .row2 .founder-img img {
+  max-width: 100%;
+  width: 15%;
+  padding-bottom: 50vh;
+}
+
+/* register page */
+.reg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+}
+
+.reg h1 {
+  font-size: 40px;
+  text-align: center;
+  margin: 40px 0;
+  color: #baddff;
+}
+
+.reg form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reg input {
+  font-size: 18px;
+  padding: 15px 10px;
+  margin: 5px;
+  width: 100%;
+  border: 0;
+  border-radius: 5px;
+}
+
+.gender {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  justify-items: center;
+}
+
+.gender input[type="radio"] {
+  margin-right: 5px;
+}
+
+.gender p {
+  margin-right: 10px;
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+.reg button {
+  font-size: 22px;
+  padding: 10px 15px;
+  margin-top: 10px;
+  width: 50%;
+  border: 0;
+  border-radius: 5px;
+  background-color: #baddff;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+}
+
+.reg button:hover {
+  background-color: #a1c7e4;
+}
+
+/* songs page */
+.title {
+  margin-top: 220px;
+  width: 100%;
+  height: auto;
+}
+
+.title h2 {
+  font-size: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #baddff;
+  font-weight: 500;
+  line-height: 1.4em;
+}
+.title .recbox {
+  width: 100%;
+  margin: 40px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.title .recbox .reccard {
+  width: 250px;
+  margin: 12px;
+  border-radius: 8px;
+  overflow: visible;
+  background: #fff;
+  color: #000;
+  background: rgba(114, 110, 110, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+  padding-top: 10px;
+  min-width: 250px;
+}
+
+.title .recbox .reccard .songcover {
+  position: relative;
+}
+
+.title .recbox .reccard img {
+  width: 210px;
+  height: 210px;
+  margin-top: 25px;
+  position: relative;
+}
+
+.title .recbox .reccard .songrec {
+  padding: 10px;
+  text-align: center;
+}
+
+.title .recbox .reccard .title {
+  font-size: 1.3em;
+  margin: 0.5px;
+  color: #fff;
+  font-weight: 400;
+}
+
+.title .recbox .reccard .artist {
+  font-size: 1em;
+  font-weight: 400;
+  color: #baddff;
+}
+
+.title .recbox .reccard:hover {
+  background-color: #4d4d4d;
+}
+
+/* song detail page */
+.page {
+  margin-top: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.song {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 50px;
+}
+
+.song img {
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 20px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.song h2,
+.song p {
+  text-align: center;
+  color: #fff;
+}
+
+.lyrics {
+  background: rgba(114, 110, 110, 0.2);
+  width: 500px;
+  margin: 0;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.scroll {
+  width: 100%;
+  background: rgba(114, 110, 110, 0.2);
+  height: 520px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.object {
+  color: #fff;
+  line-height: 1.4em;
+  padding: 10px;
+}
+
+/* Media Queries */
+/* laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62%;
+  }
+  #hamburger-menu {
+    display: inline-block;
+  }
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #fff;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+  .navbar .navbar-nav a {
+    color: var(--background);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+  .home {
+    margin-top: 30px;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+  }
+
+  .home .imgBox {
+    padding-right: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 400px;
+    justify-content: center;
+  }
+
+  .home .content {
+    text-align: center;
+    max-width: none;
+  }
+
+  .thumb {
+    position: static;
+    transform: none;
+    justify-content: center;
+  }
+
+  .thumb li {
+    margin: 0 5px;
+  }
+
+  .circle {
+    clip-path: circle(calc(70% - 50px) at top right);
+  }
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .recommend .recbox .reccard {
+    width: calc(50% - 24px);
+  }
+  .beforewave {
+    top: 13%;
+  }
+
+  .beforewave h1 {
+    font-size: 24px;
+  }
+
+  .wave {
+    top: 21%;
+  }
+
+  label {
+    font-size: 60px;
+  }
+
+  label span {
+    size: 40px;
+  }
+
+  label:hover span {
+    transform: translateY(-20px);
+  }
+
+  .abt .row {
+    flex-wrap: wrap;
+  }
+  .abt .row .about-img img {
+    padding-right: 0;
+    margin-top: -130px;
+    margin-bottom: 15px;
+    width: 400px;
+    justify-content: center;
+  }
+
+  .abt .row .content {
+    margin-top: -480px;
+    justify-content: center;
+    text-align: center;
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+
+  .found {
+    margin-top: -15vh;
+  }
+
+  .found .row2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .found .row2 .content2 {
+    flex: 1 1 100%;
+    padding: 0 2vh;
+    margin-top: 20px;
+  }
+
+  .found .row2 .founder-img {
+    flex: 1 1 100%;
+    margin-top: 20px;
+  }
+
+  .found .row2 .founder-img img {
+    width: 60%;
+  }
+
+  .title h2 {
+    font-size: 2.5em;
+  }
+
+  .title .recbox .reccard {
+    width: 45%;
+    margin: 10px;
+  }
+
+  .title .recbox .reccard img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .title .recbox .reccard .title {
+    font-size: 1.2em;
+  }
+
+  .title .recbox .reccard .artist {
+    font-size: 0.9em;
+  }
+
+  .page {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .song {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .lyrics {
+    width: 90%;
+    max-width: 600px;
+  }
+
+  .scroll {
+    height: 250px;
+  }
+}
+/* phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+  .navbar .navbar-logo {
+    font-size: 2rem;
+  }
+
+  .home .content h1 {
+    font-size: 2em;
+  }
+
+  .home .content p {
+    font-size: 0.9em;
+  }
+
+  .home .content a {
+    padding: 6px 16px;
+  }
+
+  .recommend .recbox .reccard {
+    width: calc(100% - 24px);
+  }
+
+  .abt .row .about-img {
+    margin-bottom: 0.8rem;
+  }
+
+  .abt .row .content {
+    text-align: left;
+  }
+
+  .found {
+    margin-top: -10vh;
+  }
+
+  .found .row2 .content2 {
+    padding: 0 1vh;
+    margin-top: 10px;
+  }
+
+  .found .row2 .founder-img img {
+    width: 80%;
+  }
+  .title {
+    margin-top: 100px;
+  }
+
+  .title h2 {
+    font-size: 2em;
+  }
+
+  .title .recbox .reccard {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .title .recbox .reccard img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .title .recbox .reccard .title {
+    font-size: 1em;
+  }
+
+  .title .recbox .reccard .artist {
+    font-size: 0.8em;
+  }
+
+  .lyrics {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .scroll {
+    height: 200px;
+  }
+
+  .song img {
+    max-width: 100%;
+  }
+}

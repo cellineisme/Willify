@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Willify</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- icon -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- style -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="home-page">
+    <!-- navbar start -->
+    <nav class="navbar">
+      <a href="#" class="navbar-logo">Willify</a>
+
+      <div class="navbar-nav">
+        <a href="#home">Home</a>
+        <a href="songs.html">Songs</a>
+        <a href="register.html">Register</a>
+        <a href="aboutus.html">About Us</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="hamburger-menu"
+          ><i><i data-feather="menu"></i></i
+        ></a>
+      </div>
+    </nav>
+
+    <!-- navbar end -->
+
+    <!-- home section start -->
+    <!-- latest start -->
+    <section>
+      <div class="circle"></div>
+    </section>
+    <section class="home" id="home">
+      <main class="content">
+        <h1>
+          Explore the Latest Hits <br />
+          in <span>Willify</span>
+        </h1>
+        <p>
+          Willify is a renowned music streaming platform that has revolutionized
+          how people consume music. Known for its vast and diverse library,
+          Willify offers an extensive catalog of genres, artists, and podcasts.
+          With millions of active users worldwide, Willify is celebrated for its
+          user-friendly interface, regular updates, and innovative features,
+          making it a staple for music enthusiasts.
+        </p>
+        <a href="songs.html" class="cta">Explore More</a>
+      </main>
+      <div class="imgBox">
+        <img src="img/ttpd.jpg" class="ttpd" />
+      </div>
+      <ul class="thumb">
+        <li>
+          <img
+            src="img/ttpd.jpg"
+            onclick="imgSlider('img/ttpd.jpg');changeCircleColor('#948c8b')"
+          />
+        </li>
+        <li>
+          <img
+            src="img/lany.jpg"
+            onclick="imgSlider('img/lany.jpg');changeCircleColor('#100b8f')"
+          />
+        </li>
+        <li>
+          <img
+            src="img/guts.jpg"
+            onclick="imgSlider('img/guts.jpg');changeCircleColor('#4e0d8f')"
+          />
+        </li>
+      </ul>
+    </section>
+    <!-- latest end -->
+
+    <!-- recommendation start -->
+    <div class="recommend" id="recommend">
+      <h2>Today's<span>Recommendations</span></h2>
+
+      <div class="recbox">
+        <div class="reccard">
+          <div class="songcover">
+            <img src="img/riize.jpg" />
+          </div>
+
+          <div class="songrec">
+            <h2 class="title">Memories</h2>
+            <h3 class="artist">RIIZE</h3>
+          </div>
+        </div>
+
+        <div class="reccard">
+          <div class="songcover">
+            <img src="img/NCT.jpg" />
+          </div>
+
+          <div class="songrec">
+            <h2 class="title">WISH</h2>
+            <h3 class="artist">NCT WISH</h3>
+          </div>
+        </div>
+
+        <div class="reccard">
+          <div class="songcover">
+            <img src="img/niki.jpg" />
+          </div>
+
+          <div class="songrec">
+            <h2 class="title">Anaheim</h2>
+            <h3 class="artist">NIKI</h3>
+          </div>
+        </div>
+
+        <div class="reccard">
+          <div class="songcover">
+            <img src="img/sab.jpg" />
+          </div>
+
+          <div class="songrec">
+            <h2 class="title">Feather</h2>
+            <h3 class="artist">Sabrina Carpenter</h3>
+          </div>
+        </div>
+
+        <div class="reccard">
+          <div class="songcover">
+            <img src="img/sza.jpg" />
+          </div>
+
+          <div class="songrec">
+            <h2 class="title">Gone Girl</h2>
+            <h3 class="artist">SZA</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- recommendation end -->
+    <!-- home section end -->
+
+    <!-- about us section start -->
+    <!-- <section id="aboutus" class="aboutus">
+      <h2></h2>
+    </section> -->
+
+    <!-- icon -->
+    <script>
+      feather.replace();
+    </script>
+    <!-- javascript -->
+    <script src="js/script.js"></script>
+
+    <script type="text/javascript"></script>
+  </body>
+</html>
